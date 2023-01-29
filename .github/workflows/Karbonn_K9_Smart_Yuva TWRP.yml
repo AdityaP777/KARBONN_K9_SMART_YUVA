@@ -139,19 +139,3 @@ jobs:
           name: K9_Smart_Yuva TWRP
 
           path: work/out/target/product/recovery.zip
-
-       - name: Release recovery
-
-         uses: softprops/action-gh-release@v1
-
-         env:
-
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-         with:
-
-          tag_name: ${{ github.run_id }}
-
-          name: recovery for ${{ env.DEVICE }}
-
-          files: work/out/target/product/recovery.zip
