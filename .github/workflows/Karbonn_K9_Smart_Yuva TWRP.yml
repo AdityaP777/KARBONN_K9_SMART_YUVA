@@ -152,6 +152,6 @@ jobs:
 
           tag_name: ${{ github.run_id }}
 
-          name: recovery for ${{ $DEVICE }}
+          name: recovery for ${{ env.DEVICE }}
 
           files: work/out/target/product/recovery.zip
